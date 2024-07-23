@@ -14,9 +14,5 @@
     ],
     "env": {
       "DATABASE_URL": "sqlite:///instance/database.db"
-    },
-    "gitignore": [
-      ".venv",
-      "instance/database.db"
-    ]
+    }
   }
