@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='Styles/parent.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='Styles/fonts.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='Styles/header.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='Styles/colors.css') }}">
-    <link rel="stylesheet" href="/static/Styles/{{ style }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/parent.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/fonts.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/colors.css') }}">
+    <link rel="stylesheet" href="/static/styles/{{ style }}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/x-icon" href="/static/media/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='/media/images/favicon.png') }}">
 
     <title>Fizmo - {% block title %}{% endblock %}</title>
 </head>
@@ -17,7 +17,7 @@
     <header>
         <div class="logo">
             <a href="{{ url_for('views.home') }}">
-                <img src="{{ url_for('static', filename='/images/logo-inline.png') }}" alt="logo">
+                <img src="{{ url_for('static', filename='/media/images/logo-inline.png') }}" alt="logo">
             </a>
         </div>
         <div class="nav">
@@ -36,7 +36,7 @@
             </div>
             <div class="profile">
                 <a href="{{ url_for('views.me') }}">
-                    <img src="{{ url_for('static', filename='/images/profile-pic.png') }}" alt="profile-picture">
+                    <img src="{{ url_for('static', filename='/media/images/profile-pic.png') }}" alt="profile-picture">
                 </a>
             </div>
         </div>

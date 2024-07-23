@@ -5,6 +5,7 @@ from .api.video import video_url
 
 views = Blueprint("views", __name__)
 
+
 # General Routes
 @views.route("/home/")
 @login_required
