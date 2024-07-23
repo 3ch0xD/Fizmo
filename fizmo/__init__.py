@@ -3,7 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 from .config import Config
 from flask_login import LoginManager
 import os
-from whitenoise import WhiteNoise
 
 # Initialize extensions
 db = SQLAlchemy()
@@ -29,10 +28,8 @@ def create_app():
         app.logger.error(f"Failed to create instance path: {e}")
 
     # Correctly calculate the path to the static directory
-    static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
 
     # Add Whitenoise middleware
-    app.wsgi_app = WhiteNoise(app.wsgi_app, root=static_dir, prefix='static/')
     
     # Import blueprints locally to avoid circular imports
     from .auth import auth as auth_blueprint
