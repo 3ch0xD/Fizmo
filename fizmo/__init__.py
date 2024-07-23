@@ -10,7 +10,7 @@ login_manager = LoginManager()
 
 def create_app():
     # App Declaration
-    app = Flask(__name__, static_folder='static')
+    app = Flask(__name__, static_folder='/static')
     
     # Use /tmp directory for instance path
     app.instance_path = '/tmp'
