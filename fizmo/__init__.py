@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from .config import Config
 from flask_login import LoginManager
+import os
 
 # Initialize extensions
 db = SQLAlchemy()
@@ -10,11 +11,21 @@ login_manager = LoginManager()
 def create_app():
     # App Declaration
     app = Flask(__name__)
+    
+    # Use /tmp directory for instance path
+    app.instance_path = '/tmp'
+    
     app.config.from_object(Config)
     
     # Initialize extensions with the app
     db.init_app(app)
     login_manager.init_app(app)
+
+    # Ensure the instance folder exists
+    try:
+        os.makedirs(app.instance_path, exist_ok=True)
+    except OSError as e:
+        app.logger.error(f"Failed to create instance path: {e}")
 
     # Import blueprints locally to avoid circular imports
     from .auth import auth as auth_blueprint
