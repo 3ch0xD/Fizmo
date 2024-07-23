@@ -1,0 +1,42 @@
+{% extends '/parent.html' %}
+{% block title %}
+    Sign Up for a New Account
+{% endblock %}
+{% block style %}
+    sign_up.css
+{% endblock %}
+{% block content %}
+
+<div class="background">
+    
+</div>
+<div class="container-sm">
+    <div class="form-holder">
+        <h1>Sign Up</h1>
+        <form method="post">
+            <div class="form--names">
+                <label for="first-name">First Name</label><br>
+                <input type="text" id="first-name" name="first_name" placeholder="Enter your first name..." class="form-control">
+                <label for="last-name">Last Name</label><br>
+                <input type="text" id="last-name" name="last_name" placeholder="Enter your last name..." class="form-control">
+            </div>
+            <div class="form--elements">
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email adress..." class="form-control">
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" placeholder="Enter username..." class="form-control">
+                <label for="password">Password</label><br>
+                <input type="passowrd" id="password" name="password" placeholder="Enter password..." class="form-control">
+                <label for="password_c">Confirm Password</label><br>
+                <input type="password" id="password_c" name="password_c" placeholder="Re-Enter password..." class="form-control">
+            </div>
+            <button type="submit">Sign Up</button>
+            <div class="action-btns">
+            <a href="{{ url_for('auth.login') }}" class="forgot">Already a Member?</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+  
+{% endblock %}

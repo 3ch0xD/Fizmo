@@ -1,0 +1,1 @@
+video_url = "https://vidsrc.pro/embed/movie/{{ id }}?theme=cf0b0e"

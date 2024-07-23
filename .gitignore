@@ -1,0 +1,71 @@
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore virtual environment directories
+.venv/
+env/
+venv/
+
+# Ignore cache files
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+.Python
+python*.dll
+python*.exe
+*.cache
+*.coverage
+.coverage.*
+*.cover
+.hypothesis/
+*.so
+*.dylib
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Ignore mypy cache
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ignore Pytest cache
+.pytest_cache/
+
+# Ignore coverage reports
+htmlcov/
+.coverage
+
+# Ignore Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Ignore Flask instance folder
+instance/
+
+# Ignore static files build
+staticfiles/
+static/
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore VSCode settings
+.vscode/
+.history
+
+# Ignore the __pypackages__ directory (PEP 582)
+__pypackages__/
+
+# Ignore PyCharm project files
+.idea/
+
+# Ignore macOS specific files
+.DS_Store
